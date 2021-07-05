@@ -12,6 +12,7 @@ TODO:
 - [ ] posts layout
 - [ ] fully adapt css from main site
 - [ ] js?
+- [ ] text css (accommodate markdown)
 
 <!--
 ----
