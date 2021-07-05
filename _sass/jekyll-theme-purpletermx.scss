@@ -326,6 +326,30 @@ li::before, li::marker {
 
 
 
+a {
+	text-decoration: underline;
+	color: var(--yellow);
+	background-color: #0000;
+	padding: 0 2px;
+	transition: 0.1s;
+}
+
+a:hover  {
+	color: var(--background-color);
+	background-color: var(--yellow);
+}
+
+a:active {
+	color: white;
+	background-color: var(--purple);
+	cursor: pointer;
+}
+
+
+
+
+
+
 
 
 
@@ -353,24 +377,6 @@ li::before, li::marker {
 * LINKS
 */
 
-.link {
-	text-decoration: underline;
-	color: var(--yellow);
-	background-color: #0000;
-	padding: 0 2px;
-	transition: 0.1s;
-}
-
-.link:hover  {
-	color: var(--background-color);
-	background-color: var(--yellow);
-}
-
-.link:active {
-	color: white;
-	background-color: var(--purple);
-	cursor: pointer;
-}
 
 .link--with-icon {
 	text-decoration: none;
