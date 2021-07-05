@@ -63,6 +63,7 @@ $blue: #53d2e2;
 $green: #00e272;
 $green-dimmed: #206640;
 
+$text-color: #ebeaec;
 
 /***************************/
 
@@ -78,17 +79,43 @@ $green-dimmed: #206640;
 	--purple-translucent: #5e4a8588;
 }
 
-.highlight {
-	padding: 10px;
-	margin: 5px 0;
-	white-space: pre;
-	overflow-x: scroll;
-	box-sizing: border-box;
-}
-
 code, pre, .monospaced {
 	font-family: $code-font-family;
 	font-size: $base-font-size;
+}
+
+code {
+	padding: 3px 6px;
+	background-color: $shadow-color;
+	border-radius: 5px;
+}
+
+pre {
+	padding: 0.8rem 1rem;
+	margin: 10px 0;
+	word-wrap: normal;
+	background-color: $shadow-color;
+	border: solid 1px $purple;
+	border-radius: 5px;
+
+	overflow: scroll;
+
+	> code {
+		padding: 0;
+		word-break: normal;
+		white-space: pre;
+		background: transparent;
+	}
+}
+
+.highlight {
+	margin: 10px 0;
+	border-radius: 5px;
+
+	pre {
+		margin-bottom: 0;
+		word-break: normal;
+	}
 }
 
 ::selection {
@@ -158,6 +185,7 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow-y: scroll;
+	color: $text-color;
 }
 
 @include large {
@@ -239,27 +267,39 @@ body {
 	}
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
 
 h1 {
-	font-size: 1.2em;
-	font-weight: 600;
-	width: max-content;
-	border-bottom: solid 1px #fff;
-	overflow: hidden;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	font-size: 2rem;
+	border-bottom: 1px $purple solid;
+	margin-bottom: 1.2rem;
 }
 
 h2 {
-	font-size: 1.1em;
-	font-weight: 500;
-	width: max-content;
-	border-bottom: solid 1px #fff;
-	overflow: hidden;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	font-size: 1.6rem;
+	border-bottom: 1px $purple solid;
 }
 
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1.2rem;
+	font-style: italic;
+}
 
 ul {
 	position: relative;
@@ -268,50 +308,47 @@ ul {
 
 li {
 	margin-bottom: 3px;
+
+	
 }
 
 li::before, li::marker {
 	color: $purple;
 }
 
-
-
-
-
-
-
-/* 
-* WINDOWS
-* -------
-*/
-
-
-@media screen and (min-width: 600px) {
-	.vim__window--maximized {
-		width: 100%;
-		transition: 0.3s ease;
-	}
+li.task-list-item {
+	list-style-type: none;
+	text-indent: -23px;
 }
 
-.vim__sidebar {
-	height: 100%;
+hr {
+	color: $purple;
+	background-color: $purple;
+	height: 1px;
+}
+
+
+.window__sidebar {
+	height: max-content;
+	width: 100%;
+	padding: 10px 15px;
 	box-sizing: border-box;
 	display: flex;
-	overflow: hidden;
 	transition: 0.3s ease;
-		border-left-color: var(--purple);
-		flex: 0 1 auto;
-		opacity: 1;
+	border-top: 1px $purple solid;
+	border-left: none;
+	flex: 0 0 auto;
+	opacity: 1;
 }
 
-@include medium {
-
-
+@include large {
+	.window__sidebar {
+		height: 100%;
+		width: max-content;
+		border-top: none;
+		border-left: 1px $purple solid;	
+	}
 }
-
-/*
-* WINDOW BODY
-*/
 
 .window__body {
 	padding: 0;
@@ -328,67 +365,30 @@ li::before, li::marker {
 
 a {
 	text-decoration: underline;
-	color: var(--yellow);
 	background-color: #0000;
 	padding: 0 2px;
 	transition: 0.1s;
 }
 
+a:link {
+	color: $yellow;
+}
+
 a:hover  {
-	color: var(--background-color);
-	background-color: var(--yellow);
+	color: $pink;
+}
+
+a:visited {
+	color: $pink;
 }
 
 a:active {
-	color: white;
-	background-color: var(--purple);
-	cursor: pointer;
+	color: $purple;
 }
 
 
 
 
-
-
-
-
-
-.terminal__text {
-	width: 100%;
-	text-align: left;
-	line-height: 1.5;
-	overflow-wrap: break-word;
-	margin: 5px 0;
-}
-
-
-.terminal__text--faded {
-	color: var(--purple);
-}
-
-
-
-
-
-
-
-
-/*
-* LINKS
-*/
-
-
-.link--with-icon {
-	text-decoration: none;
-}
-
-.link__ext-symbol {
-	font-size: 0.6em;
-	margin: 0 3px;
-	color: var(--purple);
-	position: relative;
-	text-indent: 0;
-}
 
 
 /* 
@@ -510,7 +510,7 @@ a:active {
 * ----------
 */
 
-.vim__text {
+.window__text {
 	padding: 20px 30px;
 	flex: 2 1 auto;
 	transition: 0.3s ease;
@@ -518,15 +518,31 @@ a:active {
 }
 
 @include large {
-	.vim__text {
+	.window__text {
 		overflow-y: scroll;
 	}
 }
 
 
+blockquote {
+	padding: 0 1rem;
+	color: $text-color;
+	border-left: 0.3rem solid $purple;
+	margin-left: 1rem;
 
-/*
-* VIM BULLET POINTS
-*/
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+img {
+	max-width: 100%;
+}
+
 
 

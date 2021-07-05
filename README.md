@@ -5,14 +5,13 @@
 Simple theme built for my [CTF Write-ups]() to match my [main site]() hosted on GitHub pages.
 Layout & styling adapted from my main site. Probably really janky.
 
+
 TODO:
-- [ ] Preprocess content so images fit
 - [ ] site sidebar
 - [ ] posts sidebar/nav
 - [ ] posts layout
-- [ ] fully adapt css from main site
 - [ ] js?
-- [ ] text css (accommodate markdown)
+- [x] text css (accommodate markdown)
 
 <!--
 ----
