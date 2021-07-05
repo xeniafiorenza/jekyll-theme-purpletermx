@@ -119,7 +119,7 @@ pre {
 }
 
 ::selection {
-	background-color: var(--purple-translucent);
+	background-color: $purple-dimmed;
 }
 
 html {
@@ -219,7 +219,14 @@ body {
 	text-align: center;
 	margin-top: 4px;
 	padding-left: 30px;
+	text-overflow: ellipsis;
+
+	#breadcrumbs {
+		height: 100%;
+		overflow: hidden;
+	}
 }
+
 
 .tabbar__button {
 	color: white;
@@ -325,28 +332,68 @@ hr {
 	color: $purple;
 	background-color: $purple;
 	height: 1px;
+	width: 100%;
 }
 
 
 .window__sidebar {
 	height: max-content;
 	width: 100%;
-	padding: 20px 25px;
+	padding: 20px 20px;
 	box-sizing: border-box;
 	display: flex;
+	align-items: center;
+	flex-direction: column;
 	transition: 0.3s ease;
 	border-top: 1px $purple solid;
 	border-left: none;
 	flex: 0 0 auto;
 	opacity: 1;
+	gap: 10px;
+	text-align: center;
+
+	hr {
+		height: 0;
+	}
 }
 
 @include large {
 	.window__sidebar {
+		text-align: left;
 		height: 100%;
-		width: max-content;
+		width: 185px;
 		border-top: none;
 		border-left: 1px $purple solid;	
+	}
+}
+
+.window__breadcrumbs {
+	flex: 0 0 auto;
+}
+
+.sidebar__nav {
+	width: 100%;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+		margin-top: 1rem;
+		margin-bottom: 0.8rem;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		border-bottom: 1px $purple solid;
+		margin-bottom: 1.2rem;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		border-bottom: none;
+	}
+
+	ul {
+		padding: initial;
+		margin-left: 10px;
 	}
 }
 

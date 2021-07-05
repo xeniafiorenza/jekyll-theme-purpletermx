@@ -1,3 +1,9 @@
 <div class="window__sidebar">
-	TODO: include posts nav
+	{% unless page.url == '/' %}
+	{% include breadcrumbs.html %}
+	<hr />
+	{% endunless %}
+	<div class="sidebar__nav">
+		{% include posts-nav.html %}
+	</div>
 </div>

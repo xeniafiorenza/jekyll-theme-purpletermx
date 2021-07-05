@@ -5,13 +5,18 @@
 Simple theme built for my [CTF Write-ups]() to match my [main site]() hosted on GitHub pages.
 Layout & styling adapted from my main site. Probably really janky.
 
+Stuff you gotta manually populate:
+* `_includes/posts-nav`
+
 
 TODO:
 - [ ] site sidebar
-- [ ] posts sidebar/nav
-- [ ] posts layout
+- [x] posts sidebar/nav
+    - [ ] make it not garbage
 - [ ] js?
-- [x] text css (accommodate markdown)
+- [x] post layouts/text css (accommodate markdown)
+- [ ] separate out post content styling
+- [ ] list static files in same folder (is that even possible)
 
 <!--
 ----
