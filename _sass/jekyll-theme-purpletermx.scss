@@ -68,18 +68,6 @@ $text-color: #ebeaec;
 
 /***************************/
 
-
-:root {
-	--background-color: #1a1623;
-	--shadow-color: #0c0b13;
-	--pink: #ff6ec9;
-	--purple: #5e4a85;
-	--yellow: #ffd500;
-	--blue: #53d2e2;
-	--green: #00e272;
-	--purple-translucent: #5e4a8588;
-}
-
 code, pre, .monospaced {
 	font-family: $code-font-family;
 	font-size: $base-font-size;
@@ -162,9 +150,8 @@ body {
 	}
 }
 
-
 .window {	 
-	box-shadow: var(--shadow-color) 15px 15px 0 0;
+	box-shadow: $shadow-color 15px 15px 0 0;
 	height: 100%;
 	width: 100%;
 	flex: 2;
@@ -202,8 +189,8 @@ body {
 */
 
 .tabbar {
-	border: var(--shadow-color) solid 1px;
-	background-color: var(--purple);
+	border: $shadow-color solid 1px;
+	background-color: $purple;
 	height: 28px;
 	width: 100%;
 	position: relative;
@@ -231,11 +218,11 @@ body {
 
 .tabbar__button {
 	color: white;
-	border-left: var(--shadow-color) solid 1px;
-	border-right: var(--pink) solid 1px;
-	border-top: var(--shadow-color) solid 1px;
-	border-bottom: var(--shadow-color) solid 1px;
-	background-color: var(--pink);
+	border-left: $shadow-color solid 1px;
+	border-right: $pink solid 1px;
+	border-top: $shadow-color solid 1px;
+	border-bottom: $shadow-color solid 1px;
+	background-color: $pink;
 	height: 100%;
 	width: 30px;
 	padding: 0;
@@ -248,8 +235,8 @@ body {
 }
 
 .tabbar__button:last-of-type {
-	border: var(--shadow-color) solid 1px;
-	border-right: var(--shadow-color) solid 1px;
+	border: $shadow-color solid 1px;
+	border-right: $shadow-color solid 1px;
 }
 
 .tabbar__button:hover {
@@ -264,8 +251,8 @@ body {
 }
 /* maximize button (only applicable when windows are smaller ie larger screen */
 .tabbar__button--maximize {
-	border-right: var(--blue) solid 1px;
-	background-color: var(--blue);
+	border-right: $blue solid 1px;
+	background-color: $blue;
 	display: none;
 }
 
@@ -316,8 +303,6 @@ ul {
 
 li {
 	margin-bottom: 3px;
-
-	
 }
 
 li::before, li::marker {
@@ -401,8 +386,8 @@ hr {
 .window__body {
 	padding: 0;
 	overflow: hidden;
-	border: var(--shadow-color) solid 1px;
-	background-color: var(--background-color);
+	border: $shadow-color solid 1px;
+	background-color: $background-color;
 	flex: 1 1;
 	height: 100%;
 	display: flex;
@@ -422,7 +407,7 @@ a:link {
 }
 
 a:visited {
-	color: $pink;
+	color: $orange;
 }
 
 a:hover  {
@@ -431,123 +416,6 @@ a:hover  {
 
 a:active {
 	color: $purple;
-}
-
-
-
-
-/* 
-* TREE LIST
-*/
-
-.tree-list {
-	margin: 0;
-	padding-left: 0;
-}
-
-.tree-list__item {
-	list-style-type: none;
-	margin-bottom: 4px;
-}
-
-.tree-list__item--folder {
-	color: var(--pink);
-}
-
-/* root */
-.tree-list__item:first-of-type::before {
-	content:'';
-	color: var(--purple);
-}
-
-/* level 1 */
-.tree-list__item::before {
-	content:'├── ';
-	color: var(--purple);
-}
-
-.tree-list__item:last-of-type::before {
-	content:'└── ';
-	color: var(--purple);
-}
-
-/* level 2 */
-.tree-list--lower1>.tree-list__item::before {
-	content:'│\00a0\00a0\00a0├── ';
-	color: var(--purple);
-}
-
-.tree-list--lower1>.tree-list__item:last-of-type::before {
-	content:'│\00a0\00a0\00a0└── ';
-	color: var(--purple);
-}
-
-.tree-list:last-child>.tree-list__item::before {
-	content:'\00a0\00a0\00a0\00a0├── ';
-	color: var(--purple);
-}
-
-.tree-list:last-child>.tree-list__item:last-of-type::before {
-	content:'\00a0\00a0\00a0\00a0└── ';
-	color: var(--purple);
-}
-
-/*
-* SECTION PICKER
-*/
-
-.section-picker {
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-	flex: 1 0 auto;
-	margin-bottom: 5px;
-}
-
-.section-picker--vertical {
-	flex-direction: column;
-	padding: 20px 15px;
-	box-sizing: border-box;
-	gap: 10px;
-}
-
-.section-picker__button {
-	background: none;
-	font: inherit;
-	color: var(--yellow);
-	border: none;
-	transition: 0.1s;
-	flex: 0 0 auto;
-	cursor: default;
-	margin-right: 30px;
-	padding: 2px 5px;
-	height: max-content;
-}
-
-.section-picker--vertical>.section-picker__button {
-	width: 100%;
-	margin: 0;
-}
-
-.section-picker__button:last-of-type {
-	margin-right: 0;
-}
-
-.section-picker__button:hover {
-	color: var(--background-color);
-	background-color: var(--yellow);
-	cursor: pointer;
-}
-
-.section-picker__button:active {
-	color: white;
-	background-color: var(--purple-translucent);
-	cursor: pointer;
-}
-
-.section-picker__button--selected {
-	color: white;
-	background-color: var(--purple);
 }
 
 .window__text {
@@ -562,7 +430,6 @@ a:active {
 		overflow-y: scroll;
 	}
 }
-
 
 blockquote {
 	padding: 0 1rem;
@@ -579,10 +446,6 @@ blockquote {
 	}
 }
 
-
 img {
 	max-width: 100%;
 }
-
-
-
