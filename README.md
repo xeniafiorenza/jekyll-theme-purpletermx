@@ -1,12 +1,27 @@
 # jekyll-theme-purpletermx
 
+**Under construction.**
+
+Simple theme built for my [CTF Write-ups]() to match my [main site]() hosted on GitHub pages.
+Layout & styling adapted from my main site. Probably really janky.
+
+TODO:
+- [ ] Preprocess content so images fit
+- [ ] site sidebar
+- [ ] posts sidebar/nav
+- [ ] posts layout
+- [ ] fully adapt css from main site
+- [ ] js?
+
+
+----
+
+
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
 To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
 TODO: Delete this and the text above, and describe your gem
-
-
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:

@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Xenia Fiorenza"]
   spec.email         = ["xenia.anong@gmail.com"]
 
-  spec.summary       = "A basic terminal window-inspired theme. Originally built for my GitHub pages."
+  spec.summary       = "A basic terminal window-inspired theme. Built for my GitHub pages."
   spec.homepage      = "https://github.com/xeniafiorenza/jekyll-theme-purpletermx"
   spec.license       = "MIT"
 

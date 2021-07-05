@@ -2,3 +2,5 @@
 
 source "https://rubygems.org"
 gemspec
+gem 'webrick'
+gem "github-pages", "~> 215", group: :jekyll_plugins
