@@ -10,7 +10,7 @@ function hideNavOnScroll() {
 	if (mediaQuery.matches) {
 		var currentScrollPos = this.scrollTop;
 		//if scrolling down & more than some distance down & not at bottom
-		if (prevScrollpos < currentScrollPos && currentScrollPos > 250 || currentScrollPos == prevScrollpos) {
+		if (prevScrollpos <= currentScrollPos && currentScrollPos > 250) {
 			document.getElementById('navbar').classList.add('main-sidebar--hidden');
 		} else if (currentScrollPos) {
 			document.getElementById('navbar').classList.remove('main-sidebar--hidden');
