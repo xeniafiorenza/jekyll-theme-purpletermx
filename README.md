@@ -12,11 +12,10 @@ Stuff you gotta manually populate:
 TODO:
 - [ ] site sidebar
 - [x] posts sidebar/nav
-    - [ ] make it not garbage
 - [ ] js?
 - [x] post layouts/text css (accommodate markdown)
 - [ ] separate out post content styling
-- [ ] list static files in same folder (is that even possible)
+- [ ] seriously clean up code
 
 <!--
 ----
