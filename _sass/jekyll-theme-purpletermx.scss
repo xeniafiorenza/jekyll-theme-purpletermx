@@ -262,12 +262,6 @@ body {
 	cursor: default;
 	opacity: 1.0;
 }
-/* maximize button (only applicable when windows are smaller ie larger screen */
-.tabbar__button--maximize {
-	border-right: $blue solid 1px;
-	background-color: $blue;
-	display: none;
-}
 
 @include medium {
 	.tabbar__button--maximize {

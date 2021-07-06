@@ -10,9 +10,9 @@ Stuff you gotta manually populate:
 
 
 TODO:
-- [ ] site sidebar
+- [x] site sidebar
 - [x] posts sidebar/nav
-- [ ] js?
+- [x] js?
 - [x] post layouts/text css (accommodate markdown)
 - [ ] separate out post content styling
 - [ ] seriously clean up code
