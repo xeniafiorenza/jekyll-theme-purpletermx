@@ -132,9 +132,15 @@ body {
 	position: relative;
 	overflow-y: scroll;
 	display: flex;
-	padding: 30px 40px;
 	box-sizing: border-box;
+	padding: 20px 30px;
 }
+
+@include small {
+	body {
+		padding: 30px 40px;
+	}
+} 
 
 .wrapper {
 	display: flex;
@@ -316,11 +322,9 @@ li.task-list-item {
 
 hr {
 	color: $purple;
-	background-color: $purple;
-	height: 1px;
+	border: 1px solid $purple;
 	width: 100%;
 }
-
 
 .window__sidebar {
 	height: max-content;
@@ -336,11 +340,7 @@ hr {
 	flex: 0 0 auto;
 	opacity: 1;
 	gap: 10px;
-	text-align: center;
-
-	hr {
-		height: 0;
-	}
+	text-align: center;	
 }
 
 @include large {
@@ -362,14 +362,14 @@ hr {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
-		margin-top: 1rem;
-		margin-bottom: 0.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 0.3rem;
 	}
 
 	h1 {
 		font-size: 1.5rem;
 		border-bottom: 1px $purple solid;
-		margin-bottom: 1.2rem;
+		margin-bottom: 1rem;
 	}
 
 	h2 {
@@ -379,7 +379,23 @@ hr {
 
 	ul {
 		padding: initial;
-		margin-left: 10px;
+		margin: 0 10px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+}
+
+@include large {
+	.sidebar__nav {
+		ul {
+			margin-left: 20px;
+		}
+		
+		li {
+			list-style-type: disc;
+		}
 	}
 }
 
