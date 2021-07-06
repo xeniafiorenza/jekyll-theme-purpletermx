@@ -6,7 +6,8 @@ Simple theme built for my [CTF Write-ups]() to match my [main site]() hosted on 
 Layout & styling adapted from my main site. Probably really janky.
 
 Stuff you gotta manually populate:
-* `_includes/posts-nav`
+* `_includes/posts-nav.html`
+* `_includes/sidebar.html`
 
 
 TODO:
