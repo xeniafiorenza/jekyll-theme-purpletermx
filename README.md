@@ -1,6 +1,6 @@
 # jekyll-theme-purpletermx
 
-Simple theme built for my [CTF Write-ups](https://blog.xeniafiorenza.me) to match my [main site](https://xeniafiorenza.me) hosted on GitHub pages.
+Simple theme built for my [CTF Write-ups](https://blog.xenosf.io) to match my [main site](https://xenosf.io).
 Layout & styling adapted from my main site.
 
 Stuff you have to manually populate:
